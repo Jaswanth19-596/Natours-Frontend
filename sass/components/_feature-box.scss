@@ -1,0 +1,53 @@
+.feature {
+  // background-color: rgba(#f7f7f7, 0.85);
+  background-color: rgba(#333, 0.85);
+  text-align: center;
+  border-radius: 2px;
+  padding: 2.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 90%;
+
+  @include respond(tab-land) {
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem;
+  }
+
+  @include respond(tab-port) {
+    width: 70%;
+    padding: 2rem 1rem;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    // padding: 2rem 10rem;
+  }
+
+  &-icon {
+    color: $color-primary;
+    font-size: 6rem;
+
+    @include respond(tab-land) {
+      font-size: 5rem;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+  & h4 {
+    color: $color-primary;
+  }
+
+  &-text {
+    // color: #868686;
+    color: #ccc;
+    font-weight: 700;
+  }
+
+  &:hover {
+    transform: translateY(-2rem) scale(1.05);
+    box-shadow: 0 5rem 7rem rgba(0, 0, 0, 0.3);
+  }
+}

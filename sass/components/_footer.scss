@@ -1,0 +1,88 @@
+.footer {
+  padding: 10rem;
+  color: white;
+  background-color: #333;
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  &__logo {
+    width: 20rem;
+  }
+
+  .footer__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    column-gap: 20rem;
+
+    .footer__navigation_nav ul {
+      font-size: 1.2rem;
+
+      @include respond(tab-land) {
+        font-size: 0.8rem;
+      }
+
+      @include respond(phone) {
+        & ul {
+          margin: 0 auto;
+        }
+      }
+
+      font-weight: 600;
+      border-top: 1px solid $color-grey-light;
+      padding: 2rem;
+      text-transform: uppercase;
+      list-style-type: none;
+      display: flex;
+      gap: 2rem;
+
+      & li {
+        transition: all 0.2s ease;
+      }
+
+      & li:hover {
+        transform: skewX(-12deg) scale(1.2) translateY(-2px);
+        box-shadow: 0 3rem 3rem #333;
+
+        & a {
+          color: $color-primary;
+        }
+      }
+
+      & li a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .footer__copyright {
+      border-top: 1px solid $color-grey-light;
+      padding: 2rem;
+      font-size: 1.2rem;
+
+      &:hover {
+        & span {
+          transition: all 1s;
+        }
+
+        & span {
+          padding: 0 2rem;
+          display: inline-block;
+          transform: skewX(-12deg) scale(1.5) translateY(-2px);
+          box-shadow: 0 3rem 3rem #333;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

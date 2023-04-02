@@ -1,0 +1,70 @@
+.btn {
+  &--green {
+    background-color: $color-primary !important;
+    color: white !important;
+  }
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    background-color: white;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    animation: moveInUp 2s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0.5rem 2rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 1px 1rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--primary::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+    transition: all 1s;
+  }
+
+  &--primary-green::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-primary;
+    z-index: -1;
+    transition: all 1s;
+  }
+
+  &--primary:hover::after {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+  }
+  &--primary-green:hover::after {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+  }
+}

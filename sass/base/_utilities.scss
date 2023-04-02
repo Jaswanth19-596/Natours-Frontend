@@ -1,0 +1,38 @@
+.u-margin-bottom-medium {
+  margin-bottom: $margin-bottom-medium;
+}
+
+.u-margin-top-medium {
+  margin-top: 10rem;
+}
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: $margin-bottom-small;
+}
+.u-margin-bottom-large {
+  margin-bottom: $margin-bottom-large;
+}
+
+.u-margin-bottom-extra-large {
+  margin-bottom: 20rem;
+}
+
+.u-paragraph {
+  color: #868686;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.u-link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: $color-primary;
+  border: 1px solid transparent;
+  padding-bottom: 0.5rem;
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+  }
+}

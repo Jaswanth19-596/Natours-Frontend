@@ -1,0 +1,36 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond($device) {
+  // 1800px
+  @if $device == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  // 1200px
+  @if $device == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  // 900px
+  @if $device == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  // 600px
+  @if $device == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
